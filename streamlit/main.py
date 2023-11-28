@@ -15,18 +15,20 @@ from langchain.llms import HuggingFaceHub
 from content import file_content
 
 
-
 def handle_userinput(user_question):
     response = st.session_state.conversation({'question': user_question})
     st.session_state.chat_history = response['chat_history']
 
     for i, message in enumerate(st.session_state.chat_history):
-        if i % 2 == 0:
-            st.write(user_template.replace(
-                "{{MSG}}", message.content), unsafe_allow_html=True)
-        else:
-            st.write(bot_template.replace(
-                "{{MSG}}", message.content), unsafe_allow_html=True)
+            #text streaming
+            full_response = ""
+            message_placeholder = st.empty()
+            for chunk in message.content.split():
+                full_response += chunk + " "
+                time.sleep(0.05)
+                # Add a blinking cursor to simulate typing
+                message_placeholder.markdown(bot_template.replace("{{MSG}}", full_response + "▌"), unsafe_allow_html=True)
+            message_placeholder.markdown(bot_template.replace("{{MSG}}", full_response), unsafe_allow_html=True)
 
 def final():
 
