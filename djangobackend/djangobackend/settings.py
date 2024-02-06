@@ -87,18 +87,19 @@ WSGI_APPLICATION = 'djangobackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+
+
 DATABASES = {
-    'default': {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "djangobackend",
-        "USER": "root",
-        "PASSWORD": "",
-        "HOST": "127.0.0.1",
-        "PORT": "3306",
-        
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "minor_project",
+        "USER": "minor_project_user",
+        "PASSWORD": "gMPEwWnRfiI82qw3PJ3mXQpMwbCtmZai",
+        "HOST": "dpg-clk69pug1b2c739hepeg-a.singapore-postgres.render.com",
+        "PORT": "5432",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
