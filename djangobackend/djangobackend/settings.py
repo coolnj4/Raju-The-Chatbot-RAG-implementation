@@ -95,8 +95,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "minor_project",
         "USER": "minor_project_user",
-        "PASSWORD": "gMPEwWnRfiI82qw3PJ3mXQpMwbCtmZai",
-        "HOST": "dpg-clk69pug1b2c739hepeg-a.singapore-postgres.render.com",
+        "PASSWORD": "YOUR_DB_PASSWORD",
+        "HOST": "YOUR_DB_HOST_-postgres.render.com",
         "PORT": "5432",
     }
 }
