@@ -1,4 +1,4 @@
-# Raju - THE CHATBOT (based on RAG implementation)
+# Raju - The Chatbot (based on RAG implementation)
 An LLM based python app that let you upload your own pdf documents and then ask questions related to it. Along with Working authencation System.
 
 ## Dependencies and Installation
